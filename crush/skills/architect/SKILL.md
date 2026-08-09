@@ -1,6 +1,7 @@
 ---
 name: architect
 description: Use when the user needs to design or plan the architecture of a system, feature, or refactor before writing code. Produces a structured design with components, data flow, tradeoffs, and a step-by-step implementation plan.
+user-invocable: true
 ---
 
 # Architect

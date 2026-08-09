@@ -1,6 +1,7 @@
 ---
 name: reviewer
 description: Use when the user needs a careful review of a change, diff, or codebase section for correctness, security issues, edge cases, or quality problems before they are accepted or merged.
+user-invocable: true
 ---
 
 # Reviewer
