@@ -88,3 +88,62 @@ Sync this repo into your live config:
 ```
 
 Requires `bash 4+` and `rsync` (both present by default on macOS).
+
+## Keybindings
+
+`<leader>` is `Space` by default in LazyVim.
+
+### Run Crush (AI agent)
+
+| Shortcut | Action |
+| --- | --- |
+| `<leader>cc` | Open/toggle the Crush agent in a vertical split |
+| `ac` | Alias for the above |
+
+Inside the Crush terminal, use `:CodockFilePosPaste @` (or the `CodockActions`
+popup) to send the current file and line to Crush.
+
+### Switch between files (buffers)
+
+| Shortcut | Action |
+| --- | --- |
+| `<C-^>` | Toggle to the previous file |
+| `<leader>ff` | File picker (find files) |
+| `<leader>fr` | Open recently opened files |
+| `<leader>fb` | List open buffers |
+| `:bnext` / `:bprev` | Go to the next / previous buffer |
+| `<leader>bd` | Delete (close) the current buffer |
+
+### Switch between panels
+
+| Shortcut | Action |
+| --- | --- |
+| `<C-w>h` / `<C-w>l` | Move to the left / right split |
+| `<C-w>j` / `<C-w>k` | Move to the split below / above |
+| `<C-w><C-w>` | Cycle to the next split |
+| `<C-w>=` | Equalize split sizes |
+
+### Switch between tabs
+
+| Shortcut | Action |
+| --- | --- |
+| `<tab>` | Go to the next tab | | `<S-tab>` | Go to the previous tab |
+| `<leader>1` ... `<leader>9` | Go to tab by number |
+| `<leader>t` | Open a new tab |
+| `<leader>T` | Close the current tab |
+
+### Run a terminal
+
+| Shortcut | Action |
+| --- | --- |
+| `<leader>ft` | Toggle the floating terminal |
+| `<leader>fT` | Open a new terminal in a split |
+| `<C-\><C-n>` | Exit terminal mode back to normal mode |
+
+### Run LazyGit
+
+| Shortcut | Action |
+| --- | --- |
+| `<leader>gg` | Open LazyGit |
+| `<leader>gG` | Open LazyGit in a floating window |
+| `q` | Close LazyGit and return to Neovim |

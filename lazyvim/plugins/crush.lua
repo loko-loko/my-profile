@@ -1,4 +1,17 @@
 return {
+  -- Disable LazyVim's codelens <leader>cc keymap so it doesn't override Crush
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        ["*"] = {
+          keys = {
+            { "<leader>cc", false },
+          },
+        },
+      },
+    },
+  },
   {
     "gitsang/codock.nvim",
     opts = {
@@ -9,8 +22,9 @@ return {
     -- Lazy-load the plugin on these commands
     cmd = { "Codock", "CodockFilePosPaste", "CodockFilePosYank", "CodockActions" },
     keys = {
-      -- Add a custom keymap (e.g., Space + a + c) to toggle the agent
-      { "ac", "Codock", desc = "Open Crush Agent", mode = { "n", "v" } },
+      -- Toggle the Crush agent in a vertical split
+      { "<leader>cc", "Codock", desc = "Open Crush Agent", mode = { "n", "v" } },
+      { "ac", "Codock", desc = "Open Crush Agent (alias)", mode = { "n", "v" } },
     },
   }
 }
