@@ -1,0 +1,7 @@
+.security.yml*
+*.log
+picoclaw/.picoclaw.pid
+picoclaw/workspace/.tmp-test/
+picoclaw/workspace/sessions/
+picoclaw/workspace/state/
+

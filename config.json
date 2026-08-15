@@ -61,7 +61,28 @@
       }
     ],
     "dispatch": {
-      "rules": []
+      "rules": [
+        {
+          "name": "english teacher telegram",
+          "agent": "english-teacher",
+          "when": {
+            "channel": "telegram_english"
+          },
+          "session_dimensions": [
+            "chat"
+          ]
+        },
+        {
+          "name": "west african linguist telegram",
+          "agent": "west-african-linguist",
+          "when": {
+            "channel": "telegram_linguist"
+          },
+          "session_dimensions": [
+            "chat"
+          ]
+        }
+      ]
     }
   },
   "evolution": {
@@ -265,7 +286,7 @@
       }
     },
     "telegram_english": {
-      "enabled": false,
+      "enabled": true,
       "type": "telegram",
       "reasoning_channel_id": "",
       "group_trigger": {},
@@ -286,7 +307,7 @@
       }
     },
     "telegram_linguist": {
-      "enabled": false,
+      "enabled": true,
       "type": "telegram",
       "reasoning_channel_id": "",
       "group_trigger": {},
@@ -418,6 +439,18 @@
       "provider": "openrouter",
       "model": "auto",
       "api_base": "https://openrouter.ai/api/v1"
+    },
+    {
+      "model_name": "openrouter-gpt-5.4",
+      "provider": "openrouter",
+      "model": "openai/gpt-5.4",
+      "api_base": "https://openrouter.ai/api/v1"
+    },
+    {
+      "model_name": "nemotron-4-340b",
+      "provider": "nvidia",
+      "model": "nemotron-4-340b-instruct",
+      "api_base": "https://integrate.api.nvidia.com/v1"
     },
     {
       "model_name": "cerebras-llama-3.3-70b",
@@ -654,7 +687,8 @@
         "max_search_results": 5,
         "use_bm25": true,
         "use_regex": false
-      }
+      },
+      "max_inline_text_chars": 16384
     },
     "append_file": {
       "enabled": true
@@ -727,6 +761,8 @@
   },
   "build_info": {
     "version": "0.3.1",
-    "git_commit": "2cf030d2"
+    "git_commit": "2cf030d2",
+    "build_time": "2026-07-03T07:10:50Z",
+    "go_version": "1.25.11"
   }
 }
